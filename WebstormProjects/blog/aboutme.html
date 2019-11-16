@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--1.设置移动端自适应-->
+    <meta name="viewport" content="width= device-width initial-scale=1.0">
+    <title>关于我</title>
+    <!--2.导入semantic UI CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="static/css/me.css">
+</head>
+<body>
+
+<!--建立导航-->
+<nav class="ui inverted attached segment">
+    <!--主页导航栏-->
+    <div class="ui container me_padding_mini">
+        <div class="ui inverted stackable menu">
+            <!--建立网页导航-->
+            <h2 class="ui teal header item">Leaf</h2>
+            <a class="m-item item m-mobile-hide" href="#"><i class="icon home"></i>首页</a>
+            <a class="m-item item m-mobile-hide" href="#"><i class="icon idea"></i>分类</a>
+            <a class="m-item item m-mobile-hide" href="#"><i class="icon tags"></i>标签</a>
+            <a class="m-item item m-mobile-hide" href="#"><i class="info icon"></i>关于我</a>
+            <a class="m-item item m-mobile-hide" href="#"><i class="clone icon"></i>归档</a>
+
+            <!--建立一个搜索框-->
+            <div class="right item m-mobile-hide">
+                <div class="ui transparent inverted icon input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search icon link"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black button icon m-top-right m-mobile-show" style="display: none">
+        <i class="sidebar icon mini aligned"></i>
+    </a>
+</nav>
+
+<!--中间内容-->
+<div>
+    <div class="ui container m-padding-medium">
+        <div class="ui grid stackable">
+            <div class="ui ten wide column right aligned">
+                <img src="./static/image/me.jpeg" alt="" class="ui image">
+            </div>
+            <div class="ui six wide column left aligned menu vertical">
+                <div class="item">1111111111111</div>
+                <div class="item">
+                    <p>我是一个独立开发者</p>
+                    <p>热爱编程，正在探索高效学习的方法</p>
+                </div>
+                <div class="item">
+                        <span>
+                        <label for="#" class="ui label orange rounded basic large">编程</label>
+                        <label for="#" class="ui label orange rounded basic large">编程</label>
+                        <label for="#" class="ui label orange rounded basic large">编程</label>
+                        <label for="#" class="ui label orange rounded basic large">编程</label>
+                        </span>
+                </div>
+                <div class="item">
+                    <span>
+                         <label for="#" class="ui label teal rounded basic large">Java</label>
+                         <label for="#" class="ui label teal rounded basic large">Node</label>
+                         <label for="#" class="ui label teal rounded basic large">JS</label>
+                         <label for="#" class="ui label teal rounded basic large">HTML</label>
+                         <label for="#" class="ui label teal rounded basic large">CSS</label>
+                         <label for="#" class="ui label teal rounded basic large">Mysql</label>
+                    </span>
+                </div>
+                <div class="item">
+                    <span>
+                    <a href="#"><i class="ui github icon large"></i></a>
+                    <a href="#"><i class="ui wechat wechati icon large"></i></a>
+                    </span>
+
+                    <div class="ui wechatqr flowing popup transition hidden">
+                        <img src="./static/image/me.jpeg" alt="" class="ui image" style="width: 100px !important;">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部 footer-->
+<footer class="ui inverted attached segment m-padding-big">
+    <div class="container ui center aligned ">
+        <!--使用栅格系统-->
+        <div class="ui  inverted divided grid">
+            <div class="three wide column"><img src="./static/image/me.jpeg" class="ui rounded image" alt=""
+                                                style="width: 110px"></div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户体验</a>
+                    <a href="#" class="item">练习清单</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户体验</a>
+                    <a href="#" class="item">练习清单</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header">联系我们</h4>
+                <P class="m-opacity_mini">这是我的个人博客。会分享有关编程的相关信息，希望可以给到这里的人有所帮助</P>
+            </div>
+        </div>
+        <div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-opacity_mini">© 2019 Leaf. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!--3.导入Jquery CDN-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<!--2.导入semantic UI CDN-->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+    $('.wechati').popup({
+        popup: $('.wechatqr.popup'),
+        on: 'click',
+        position: 'bottom center'
+    });
+</script>
+
+</body>
+</html>
